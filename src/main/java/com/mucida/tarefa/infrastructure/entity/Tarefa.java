@@ -1,6 +1,5 @@
 package com.mucida.tarefa.infrastructure.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.mucida.tarefa.infrastructure.enums.StatusNotificacaoEnum;
 import lombok.*;
 import org.springframework.data.annotation.Id;
