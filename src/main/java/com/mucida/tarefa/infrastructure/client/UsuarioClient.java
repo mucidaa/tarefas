@@ -11,5 +11,4 @@ public interface UsuarioClient {
 
     @GetMapping("/usuario")
     UsuarioDTO findByEmail(@RequestParam("email") String email, @RequestHeader("Authorization") String token);
-
 }
