@@ -1,8 +1,7 @@
-package com.mucida.usuario.controller;
+package com.mucida.tarefa.controller;
 
-import com.mucida.usuario.infrastructure.exceptions.ConflictException;
-import com.mucida.usuario.infrastructure.exceptions.ResourceNotFoundException;
-import com.mucida.usuario.infrastructure.exceptions.UnauthorizedException;
+import com.mucida.tarefa.infrastructure.exceptions.ResourceNotFoundException;
+import com.mucida.tarefa.infrastructure.exceptions.UnauthorizedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -16,13 +15,8 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(ConflictException.class)
-    public ResponseEntity<String> handlerConflictException(ConflictException e) {
-        return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
-    }
-
     @ExceptionHandler(UnauthorizedException.class)
-    public ResponseEntity<String> handlerUnauthorizedException(UnauthorizedException e) {
+    public ResponseEntity<String> handlerUnauthorizedExceptionException(UnauthorizedException e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.UNAUTHORIZED);
     }
 }

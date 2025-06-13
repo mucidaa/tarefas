@@ -1,6 +1,8 @@
-package com.mucida.usuario.infrastructure.exceptions;
+package com.mucida.tarefa.infrastructure.exceptions;
 
-public class UnauthorizedException extends RuntimeException {
+import javax.security.sasl.AuthenticationException;
+
+public class UnauthorizedException extends AuthenticationException {
     public UnauthorizedException(String message) {
         super(message);
     }
